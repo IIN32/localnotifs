@@ -4,7 +4,6 @@ import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class NotificationService{
-  //Initialization
   static final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
 
   static Future<void> onDidReceiveNotification(NotificationResponse notificationResponse) async{}
@@ -30,7 +29,7 @@ class NotificationService{
   }
   //Show an instant notification
   static Future<void> showInstantNotification(String title, String body, int id) async{
-    //Details
+    //Notifications Details
     const NotificationDetails platformChannelSpecifics = NotificationDetails(
         android: AndroidNotificationDetails(
           "Channel_Id",
